@@ -2,12 +2,13 @@ import React, { useState } from 'react';
 import './counter.css';
 
 export default function CounterApp() {
-    const [{counter1, counter2}, setCounter] = useState({counter1: 10, counter2: 20})
+    const [state, setState] = useState({counter1: 10, counter2: 20, counter3: 30})
+    const {counter1, counter2} = state; 
     const handleCounter = () => {
-        setCounter(({counter1,counter2}) => {
+        setState(() => {
             return {
+                ...state,
                 counter1: counter1+1,
-                counter2: counter2
             }
         });
     }
@@ -15,7 +16,8 @@ export default function CounterApp() {
 
     return (
         <div>
-            {/* <h1>Counter {counter}</h1> */}
+            <h1>Counter {counter1}</h1>
+            <h1>Counter {counter2}</h1>
             <hr/>
             <button onClick={handleCounter} className="btn btn-primary"> + 1</button>
         </div>
