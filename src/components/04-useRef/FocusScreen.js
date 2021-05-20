@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useRef } from 'react';
 import '../02-useEffect/effects.css';
 
 const FocusScreen = () => {
