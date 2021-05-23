@@ -1,5 +1,5 @@
 import { shallow } from "enzyme";
-import { demoTodos } from "../../fixtures/demoTodos";
+import { todosMock } from "../../fixtures/todosMock";
 import TodoListItem from "../../../components/08-useReducer/TodoListItem";
 
 describe('TodoListItem.js', () => {
@@ -7,7 +7,7 @@ describe('TodoListItem.js', () => {
     const handleDeleteTodo = jest.fn();
     const handleToggleTodo = jest.fn();
     const index = 0;
-    const todo = demoTodos[0];
+    const todo = todosMock[0];
     let wrapper = shallow(
         <TodoListItem 
             index={index} 

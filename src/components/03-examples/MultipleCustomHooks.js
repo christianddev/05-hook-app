@@ -4,8 +4,8 @@ import {useCounter} from '../../hooks/useCounter';
 import '../02-useEffect/effects.css';
 
 const MultipleCustomHooks = () => {
-    const {counter, increment} = useCounter(1);
-    const {loading, data} = useFetch(`https://breakingbadapi.com/api/quotes/${counter}`);
+    const {state, increment} = useCounter(1);
+    const {loading, data} = useFetch(`https://breakingbadapi.com/api/quotes/${state}`);
     const {author, quote}= !!data && data[0];
 
     return (

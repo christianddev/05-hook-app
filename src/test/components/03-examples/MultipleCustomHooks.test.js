@@ -11,7 +11,7 @@ describe('RealExempleRef.js', () => {
 
     beforeEach(() => {
         useCounter.mockReturnValue({
-            counter: 15,
+            state: 15,
             increment: () => {}
         });
     })

@@ -1,4 +1,4 @@
-export const demoTodos = [
+export const todosMock = [
     {
         id: 1,
         desc: 'todo1',

@@ -1,6 +1,5 @@
 import React from 'react';
-import { demoTodos } from "../../fixtures/demoTodos";
-import TodoListItem from "../../../components/08-useReducer/TodoListItem";
+import { todosMock } from "../../fixtures/todosMock";
 import { shallow } from 'enzyme';
 import TodoList from '../../../components/08-useReducer/TodoList';
 
@@ -10,7 +9,7 @@ describe('TodoList.js', () => {
     const handleToggleTodo = jest.fn();
     const wrapper = shallow(
          <TodoList 
-             todos={demoTodos} 
+             todos={todosMock} 
              handleToggleTodo={handleToggleTodo} 
              handleDeleteTodo={handleDeleteTodo} 
          />
@@ -21,7 +20,7 @@ describe('TodoList.js', () => {
     })
 
     test('should show TodoListItem', () => {
-         expect(wrapper.find('TodoListItem').length).toBe(demoTodos.length);
+         expect(wrapper.find('TodoListItem').length).toBe(todosMock.length);
          expect(wrapper.find('TodoListItem').at(0).prop('handleToggleTodo')).toEqual(expect.any(Function));
          expect(wrapper.find('TodoListItem').at(0).prop('handleDeleteTodo')).toEqual(expect.any(Function));
      })

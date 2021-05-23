@@ -1,12 +1,12 @@
 import todoReducer from "../../../components/08-useReducer/todoReducer";
-import { demoTodos } from "../../fixtures/demoTodos";
+import { todosMock } from "../../fixtures/todosMock";
 
 
 
 describe('todoReducer.js', () => {
     test('should return default value', () => {
-        const state = todoReducer(demoTodos, {type: 'someAction'});
-        expect(state).toEqual(demoTodos);        
+        const state = todoReducer(todosMock, {type: 'someAction'});
+        expect(state).toEqual(todosMock);        
     })
 
     test('should add new TODO', () => {
@@ -21,7 +21,7 @@ describe('todoReducer.js', () => {
             type: 'add',
             payload: newTodo
        }
-        const state = todoReducer(demoTodos, action);
+        const state = todoReducer(todosMock, action);
         expect(state.length).toBe(3);        
         expect(state.find((s) => s.id === id)).toEqual(newTodo);        
     })
@@ -31,7 +31,7 @@ describe('todoReducer.js', () => {
             type: 'delete',
             payload: 1
        }
-        const state = todoReducer(demoTodos, action);
+        const state = todoReducer(todosMock, action);
         expect(state.length).toBe(1);   
         expect(state.some((s) => s.id === 1)).toBe(false);              
     })
@@ -41,7 +41,7 @@ describe('todoReducer.js', () => {
             type: 'toggle',
             payload: 2
        }
-        const state = todoReducer(demoTodos, action);
+        const state = todoReducer(todosMock, action);
         expect(state.some((s) => s.done === true)).toBe(true);             
     })
     
