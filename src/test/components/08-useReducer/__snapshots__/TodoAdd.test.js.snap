@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TodoAdd.js should show TodoAdd 1`] = `
+<Fragment>
+  <h4>
+    Agregar
+  </h4>
+  <hr />
+  <form
+    onSubmit={[Function]}
+  >
+    <input
+      autoComplete="off"
+      className="form-control"
+      name="description"
+      onChange={[Function]}
+      placeholder="Learn.."
+      type="text"
+      value=""
+    />
+    <button
+      className="btn btn-primary mt-1 form-control"
+      type="submit"
+    >
+      Agregar
+    </button>
+  </form>
+</Fragment>
+`;
