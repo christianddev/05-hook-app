@@ -21,4 +21,4 @@ const RealExempleRef = () => {
     )
 }
 
-export default RealExempleRef
+export default RealExempleRef;

@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react"
+import { useEffect, useRef, useState } from "react";
 
 
 export const useFetch = (url) => {
@@ -16,8 +16,11 @@ export const useFetch = (url) => {
             .then(res => res.json())
             .then(data => {
                if (isMounted.current) {
-                  setState({loading: false, error: null, data: data})
+                  setState({loading: false, data: data, error: null})
                } 
+            })
+            .catch(() => {
+               setState({data: null, loading: false, error: 'Error'})
             });
             
    }, [url])

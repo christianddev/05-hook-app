@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RealExempleRef.js should show MultipleCustomHooks 1`] = `
+<div>
+  <h1>
+    breaking Bad Quotes
+  </h1>
+  <hr />
+  <div
+    className="alert alert-info text-center"
+  >
+    Loading..
+  </div>
+</div>
+`;

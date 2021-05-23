@@ -3,7 +3,7 @@
 exports[`HookApp.js should show HookApp 1`] = `
 <div>
   <h1>
-    Hook App
+    HookApp
   </h1>
 </div>
 `;
