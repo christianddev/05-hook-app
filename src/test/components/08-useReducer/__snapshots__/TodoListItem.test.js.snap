@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TodoListItem.js should show TodoListItem 1`] = `
+<li
+  className="list-group-item"
+  key="1"
+>
+  <p
+    className="false"
+    onClick={[Function]}
+  >
+    1
+    . 
+    todo1
+  </p>
+  <button
+    className="btn btn-danger"
+    onClick={[Function]}
+  >
+    Delete
+  </button>
+</li>
+`;
